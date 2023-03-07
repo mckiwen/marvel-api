@@ -28,7 +28,7 @@ public class ServicioHeroeImpl implements ServicioHeroe{
 
     @Override
     public List<Heroe> getHeroeNombre(String nombre) {
-        return null;
+        return repositorioHeroe.findAll();
     }
 
     //@Override
