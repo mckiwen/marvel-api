@@ -20,16 +20,16 @@ public class ServicioHeroeImpl implements ServicioHeroe{
     }
 
     @Override
-    public Heroe getHeroeId(Long id) {
-        return repositorioHeroe.findById(id).orElseThrow(() -> {
-            throw new RuntimeException();
-        });
+    public Optional<Heroe> findById(Long id) {
+        return Optional.empty();
     }
 
     @Override
-    public List<Heroe> getHeroeNombre(String nombre) {
-        return repositorioHeroe.findAll();
+    public Optional<Heroe> findByNombre(String nombre) {
+        return Optional.empty();
     }
+
+
 
     //@Override
     //public List<Heroe> getHeroeNombre(String nombre) {

@@ -8,8 +8,7 @@ import java.util.Optional;
 public interface ServicioHeroe {
     Heroe guardarHeroe(Heroe heroe);
 
-    Heroe getHeroeId(Long id);
-
-    List<Heroe> getHeroeNombre(String nombre);
+    Optional<Heroe> findById(Long id);
+    Optional<Heroe> findByNombre(String nombre);
 }
 
