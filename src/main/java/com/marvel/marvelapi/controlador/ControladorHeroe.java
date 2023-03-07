@@ -2,7 +2,6 @@ package com.marvel.marvelapi.controlador;
 
 import com.marvel.marvelapi.modelo.Heroe;
 import com.marvel.marvelapi.repositorio.RepositorioHeroe;
-import com.marvel.marvelapi.servicio.ServicioHeroe;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
