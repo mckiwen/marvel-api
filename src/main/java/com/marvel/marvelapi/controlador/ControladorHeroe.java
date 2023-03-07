@@ -2,6 +2,7 @@ package com.marvel.marvelapi.controlador;
 
 import com.marvel.marvelapi.modelo.Heroe;
 import com.marvel.marvelapi.repositorio.RepositorioHeroe;
+import com.marvel.marvelapi.servicio.ServicioHeroe;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,14 @@ public class ControladorHeroe {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+    //private final ServicioHeroe servicioHeroe;
+
+    //@PostMapping("/descarga")
+    //public void descargaHeroes() {
+    //    servicioHeroe.descargaHeroes();
+    //}
 
 
 }
