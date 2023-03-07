@@ -3,7 +3,6 @@ package com.marvel.marvelapi.modelo;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
 @Table(name = "heroe")
