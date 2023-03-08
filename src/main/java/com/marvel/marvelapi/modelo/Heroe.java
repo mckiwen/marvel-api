@@ -15,4 +15,8 @@ public class Heroe {
     private Long id;
     @Column(nullable = false)
     private String nombre;
+    @Column(columnDefinition="TEXT")
+    private String descripcion;
+    @Column(nullable = false)
+    private String imagen;
 }
