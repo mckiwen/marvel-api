@@ -15,19 +15,5 @@ public class MarvelApiApplication {
 		SpringApplication.run(MarvelApiApplication.class, args);
 	}
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
-
-	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-		return args -> {
-			Quote quote = restTemplate.getForObject(
-					"http://localhost:8080/heroes/1", Quote.class);
-			assert quote != null;
-			System.out.println(quote);
-		};
-	}
 
 }
