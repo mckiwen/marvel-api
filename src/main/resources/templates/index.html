@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Heroes Marvel</title>
+</head>
+<body>
+
+
+<div class="card offset-3 col-5" style="width: 50rem;">
+    <div class="card-body">
+        <h5 class="card-title">Héroes de Marvel</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Selecciona un héroe:</h6>
+        <form>
+            <label for="id">ID:</label>
+            <select class="form-select mt-1" id="id" name="id" onchange="redirectToURL(this)">
+                <option value="http://localhost:8080/heroes/" selected>Seleccione un ID</option>
+                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.id}" value="http://localhost:8080/heroes/${heroe.id}"></option>
+
+            </select>
+            <label for="nombre">Nombre:</label>
+            <select class="form-select mt-1" id="nombre" name="nombre" onchange="redirectToURL(this)">
+                <option value="http://localhost:8080/heroes/" selected>Seleccione un Nombre</option>
+                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.nombre}" value="http://localhost:8080/heroes?nombre=${heroe.nombre}"></option>
+            </select>
+        </form>
+        <p class="card-text"></p>
+        <a href="#" class="card-link"></a>
+        <a href="#" class="card-link"></a>
+    </div>
+</div>
+
+<script>
+		function redirectToURL(selectElement) {
+			var selectedOptionValue = selectElement.value;
+			if (selectedOptionValue !== "") {
+				window.location = selectedOptionValue;
+			}
+		}
+</script>
+
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

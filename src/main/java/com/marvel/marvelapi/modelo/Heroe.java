@@ -1,12 +1,14 @@
 package com.marvel.marvelapi.modelo;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "heroe")
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class Heroe {
     @Id
