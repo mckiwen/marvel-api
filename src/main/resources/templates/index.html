@@ -16,14 +16,14 @@
         <form>
             <label for="id">ID:</label>
             <select class="form-select mt-1" id="id" name="id" onchange="redirectToURL(this)">
-                <option value="http://localhost:8080/heroes/" selected>Seleccione un ID</option>
-                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.id}" value="http://localhost:8080/heroes/${heroe.id}"></option>
+                <option value="http://localhost:${server.port}/heroes/" selected>Seleccione un ID</option>
+                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.id}" value="http://localhost:${server.port}/heroes/${heroe.id}"></option>
 
             </select>
             <label for="nombre">Nombre:</label>
             <select class="form-select mt-1" id="nombre" name="nombre" onchange="redirectToURL(this)">
-                <option value="http://localhost:8080/heroes/" selected>Seleccione un Nombre</option>
-                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.nombre}" value="http://localhost:8080/heroes?nombre=${heroe.nombre}"></option>
+                <option value="http://localhost:${server.port}/heroes/" selected>Seleccione un Nombre</option>
+                <option th:each="heroe : ${heroes}" th:value="${heroe.id}" th:text="${heroe.nombre}" value="http://localhost:${server.port}/heroes?nombre=${heroe.nombre}"></option>
             </select>
         </form>
         <p class="card-text"></p>
